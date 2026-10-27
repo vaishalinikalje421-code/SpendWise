@@ -1,0 +1,61 @@
+# 💰 SpendWise — Personal Finance Dashboard
+
+SpendWise is a responsive personal finance dashboard designed to help users visualize their finances, track transactions, and monitor their spending through a clean and intuitive interface.
+
+## ✨ Features
+
+- 📊 **Financial Overview** — View key financial summaries at a glance.
+- 📈 **Visual Analytics** — Understand financial data through charts and visualizations.
+- 💳 **Transaction History** — View and organize transaction records.
+- 📱 **Responsive Design** — Access the dashboard across desktop, tablet, and mobile screens.
+- 🎨 **Modern UI** — Clean layout with a sidebar, dashboard cards, and consistent styling.
+- 🌓 **Theme Support** — Theme-related styling and JavaScript, if enabled in the current implementation.
+
+## 🛠️ Technologies Used
+
+- **HTML5** — Structure of the dashboard.
+- **CSS3** — Styling, layout, and responsive design.
+- **JavaScript** — Client-side interactions and dashboard functionality.
+
+## 📂 Project Structure
+
+SpendWise/
+├── index.html
+├── styles.css
+├── theme.css
+├── theme.js
+├── script.js
+└── README.md
+```
+
+*Note: Include only the files and folders that actually exist in your project. Add an `assets/` folder here if your project uses images or other resources.*
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+A modern web browser is sufficient to view the frontend.
+
+### Run Locally
+
+1. Clone or download this repository.
+2. Open the project folder.
+3. Open `index.html` in your browser.
+
+For a better development experience, you can also use the **Live Server** extension in Visual Studio Code.
+
+## 🔮 Future Improvements
+
+- Connect a backend for persistent financial data.
+- Add user authentication.
+- Enable transaction creation, editing, and deletion.
+- Integrate interactive charts with real financial data.
+- Add budget tracking and expense categorization.
+
+## 👩‍💻 Author
+
+**Vaishali Dilip Nikalje**
+
+## 📄 License
+
+This project is available for learning and portfolio purposes. Add a formal license if you intend to specify permissions for reuse and distribution.

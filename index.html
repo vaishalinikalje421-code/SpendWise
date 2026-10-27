@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpendWise personal expense tracking dashboard">
+    <title>SpendWise | Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="index.html" class="brand" aria-label="SpendWise home">
+                <span class="brand-icon">S</span>
+                <span>Spend<span class="brand-highlight">Wise</span></span>
+            </a>
+
+            <div class="sidebar-label">WORKSPACE</div>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#dashboard" class="nav-link active" aria-current="page">
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#transactions" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">↔</span>
+                    Transactions
+                </a>
+
+                <a href="#budgets" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">◷</span>
+                    Budgets
+                </a>
+
+                <a href="#analytics" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">▥</span>
+                    Analytics
+                </a>
+            </nav>
+
+            <div class="sidebar-label tools-label">PREFERENCES</div>
+
+            <nav class="navigation" aria-label="Preferences">
+                <a href="sidepages/settings.html" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">⚙</span>
+                    Settings
+                </a>
+
+                <a href="sidepages/help.html" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">?</span>
+                    Help &amp; Support
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="upgrade-card">
+                    <div class="upgrade-icon" aria-hidden="true">✦</div>
+                    <h3>Your finances, simplified.</h3>
+                    <p>Small steps today, bigger savings tomorrow.</p>
+                </div>
+
+                <a href="sidepages/profile.html" class="profile">
+                    <div class="avatar" aria-hidden="true">U</div>
+                    <div class="profile-info">
+                        <strong>Your Profile</strong>
+                        <span>Personal account</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content" id="dashboard">
+
+            <!-- Page header -->
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR FINANCIAL OVERVIEW</p>
+                    <h1>Dashboard</h1>
+                    <p class="page-subtitle">
+                        Here's what's happening with your money.
+                    </p>
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="icon-button" type="button" aria-label="Notifications" title="Notifications">
+                        ♧
+                    </button>
+
+                    <div class="date-chip">
+                        <span aria-hidden="true">▦</span>
+                        October 2026
+                    </div>
+                </div>
+            </header>
+
+            <!-- Financial summary cards -->
+            <section class="summary-grid" aria-label="Financial summary">
+
+                <article class="summary-card balance-card">
+                    <div class="card-heading">
+                        <span>Total Balance</span>
+                        <span class="card-icon balance-icon" aria-hidden="true">₹</span>
+                    </div>
+
+                    <h2>₹84,250.00</h2>
+
+                    <p class="card-note">
+                        <span class="positive">↗ 8.2%</span>
+                        <span>vs. last month</span>
+                    </p>
+
+                    <div class="mini-progress" aria-label="Financial health progress">
+                        <span style="width: 72%"></span>
+                    </div>
+
+                    <p class="progress-caption">
+                        Your financial health is looking good
+                    </p>
+                </article>
+
+                <article class="summary-card">
+                    <div class="card-heading">
+                        <span>Total Income</span>
+                        <span class="card-icon income-icon" aria-hidden="true">↙</span>
+                    </div>
+
+                    <h2>₹45,000.00</h2>
+
+                    <p class="card-note">
+                        <span class="positive">↗ 12.5%</span>
+                        <span>vs. last month</span>
+                    </p>
+
+                    <div class="card-footer">
+                        <span class="dot income-dot"></span>
+                        Monthly earnings
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="card-heading">
+                        <span>Total Expenses</span>
+                        <span class="card-icon expense-icon" aria-hidden="true">↗</span>
+                    </div>
+
+                    <h2>₹28,750.00</h2>
+
+                    <p class="card-note">
+                        <span class="negative">↗ 4.3%</span>
+                        <span>vs. last month</span>
+                    </p>
+
+                    <div class="card-footer">
+                        <span class="dot expense-dot"></span>
+                        Monthly spending
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="card-heading">
+                        <span>Total Savings</span>
+                        <span class="card-icon savings-icon" aria-hidden="true">♧</span>
+                    </div>
+
+                    <h2>₹16,250.00</h2>
+
+                    <p class="card-note">
+                        <span class="positive">36.1%</span>
+                        <span>of your income</span>
+                    </p>
+
+                    <div class="card-footer">
+                        <span class="dot savings-dot"></span>
+                        Savings this month
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Charts -->
+            <section class="charts-grid" id="analytics" aria-label="Financial analytics">
+
+                <!-- Income and expenses chart -->
+                <article class="panel spending-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3>Spending Overview</h3>
+                            <p>Track your income and expenses over time.</p>
+                        </div>
+
+                        <select aria-label="Spending chart period">
+                            <option>This year</option>
+                            <option>This month</option>
+                            <option>Last 6 months</option>
+                        </select>
+                    </div>
+
+                    <div class="chart-legend">
+                        <span>
+                            <i class="legend-dot income-dot"></i>
+                            Income
+                        </span>
+                        <span>
+                            <i class="legend-dot expense-dot"></i>
+                            Expenses
+                        </span>
+                    </div>
+
+                    <!-- Sample monthly bar chart -->
+                    <div class="bar-chart" role="img"
+                        aria-label="Sample monthly income and expenses chart from May to October">
+                        <div class="chart-grid-lines">
+                            <span>₹50k</span>
+                            <span>₹40k</span>
+                            <span>₹30k</span>
+                            <span>₹20k</span>
+                            <span>₹10k</span>
+                        </div>
+
+                        <div class="chart-columns">
+                            <div class="chart-column">
+                                <div class="bars">
+                                    <span class="bar income-bar" style="height: 65%"></span>
+                                    <span class="bar expense-bar" style="height: 40%"></span>
+                                </div>
+                                <span class="month-label">May</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="bars">
+                                    <span class="bar income-bar" style="height: 75%"></span>
+                                    <span class="bar expense-bar" style="height: 50%"></span>
+                                </div>
+                                <span class="month-label">Jun</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="bars">
+                                    <span class="bar income-bar" style="height: 60%"></span>
+                                    <span class="bar expense-bar" style="height: 43%"></span>
+                                </div>
+                                <span class="month-label">Jul</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="bars">
+                                    <span class="bar income-bar" style="height: 82%"></span>
+                                    <span class="bar expense-bar" style="height: 55%"></span>
+                                </div>
+                                <span class="month-label">Aug</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="bars">
+                                    <span class="bar income-bar" style="height: 70%"></span>
+                                    <span class="bar expense-bar" style="height: 62%"></span>
+                                </div>
+                                <span class="month-label">Sep</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="bars">
+                                    <span class="bar income-bar" style="height: 90%"></span>
+                                    <span class="bar expense-bar" style="height: 58%"></span>
+                                </div>
+                                <span class="month-label">Oct</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Expense breakdown -->
+                <article class="panel category-panel" id="budgets">
+                    <div class="panel-header">
+                        <div>
+                            <h3>Expense Breakdown</h3>
+                            <p>Where your money goes.</p>
+                        </div>
+
+                        <button class="text-button" type="button">
+                            Details ↗
+                        </button>
+                    </div>
+
+                    <div class="donut-wrapper">
+                        <div class="donut-chart" role="img" aria-label="Expense breakdown totaling ₹28,750">
+                            <div class="donut-center">
+                                <span>Total spent</span>
+                                <strong>₹28,750</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-list">
+                        <div class="category-item">
+                            <span class="category-name">
+                                <i class="category-color food-color"></i>
+                                Food &amp; Dining
+                            </span>
+                            <strong>₹8,500</strong>
+                        </div>
+
+                        <div class="category-item">
+                            <span class="category-name">
+                                <i class="category-color transport-color"></i>
+                                Transport
+                            </span>
+                            <strong>₹5,250</strong>
+                        </div>
+
+                        <div class="category-item">
+                            <span class="category-name">
+                                <i class="category-color bills-color"></i>
+                                Bills &amp; Utilities
+                            </span>
+                            <strong>₹9,000</strong>
+                        </div>
+
+                        <div class="category-item">
+                            <span class="category-name">
+                                <i class="category-color other-color"></i>
+                                Others
+                            </span>
+                            <strong>₹6,000</strong>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Recent transactions -->
+            <section class="panel transactions-panel" id="transactions">
+                <div class="panel-header transaction-header">
+                    <div>
+                        <h3>Recent Transactions</h3>
+                        <p>Your latest income and expenses.</p>
+                    </div>
+
+                    <button class="primary-button" type="button">
+                        <span aria-hidden="true">+</span>
+                        Add Transaction
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">TRANSACTION</th>
+                                <th scope="col">CATEGORY</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">AMOUNT</th>
+                                <th scope="col">STATUS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon food-bg" aria-hidden="true">☕</span>
+                                        <span>
+                                            <strong>Starbucks Coffee</strong>
+                                            <small>Morning coffee</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>Food &amp; Dining</td>
+                                <td>Oct 26, 2026</td>
+                                <td class="amount expense-amount">− ₹450.00</td>
+                                <td>
+                                    <span class="status-badge completed">Completed</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon income-bg" aria-hidden="true">↙</span>
+                                        <span>
+                                            <strong>Monthly Salary</strong>
+                                            <small>Company payment</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>Salary</td>
+                                <td>Oct 25, 2026</td>
+                                <td class="amount income-amount">+ ₹35,000.00</td>
+                                <td>
+                                    <span class="status-badge completed">Completed</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon transport-bg" aria-hidden="true">↗</span>
+                                        <span>
+                                            <strong>Uber Ride</strong>
+                                            <small>Office commute</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>Transport</td>
+                                <td>Oct 24, 2026</td>
+                                <td class="amount expense-amount">− ₹320.00</td>
+                                <td>
+                                    <span class="status-badge completed">Completed</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon bills-bg" aria-hidden="true">⌂</span>
+                                        <span>
+                                            <strong>Electricity Bill</strong>
+                                            <small>Monthly utility</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>Bills &amp; Utilities</td>
+                                <td>Oct 22, 2026</td>
+                                <td class="amount expense-amount">− ₹1,850.00</td>
+                                <td>
+                                    <span class="status-badge completed">Completed</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon shopping-bg" aria-hidden="true">◇</span>
+                                        <span>
+                                            <strong>Amazon Purchase</strong>
+                                            <small>Personal shopping</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>Shopping</td>
+                                <td>Oct 20, 2026</td>
+                                <td class="amount expense-amount">− ₹2,499.00</td>
+                                <td>
+                                    <span class="status-badge completed">Completed</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer">
+                    <span>Showing 5 sample transactions</span>
+                    <a href="#transactions">View all transactions →</a>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="page-footer">
+                <span>© 2026 SpendWise</span>
+                <span>Made for smarter money habits.</span>
+            </footer>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

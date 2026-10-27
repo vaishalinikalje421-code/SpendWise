@@ -1,0 +1,240 @@
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    margin-bottom: 16px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: var(--text-color, #222222);
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: var(--muted-text, #777777);
+}
+
+/* Settings Card */
+
+.settings-card {
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e8e8e8);
+    border-radius: 14px;
+    padding: 6px 22px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border-color, #eeeeee);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: var(--text-color, #222222);
+}
+
+.setting-item p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted-text, #777777);
+}
+
+/* Currency Dropdown */
+
+#currency {
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color, #dddddd);
+    border-radius: 8px;
+    background: var(--input-bg, #ffffff);
+    color: var(--text-color, #222222);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+#currency:focus {
+    border-color: #6c63ff;
+}
+
+/* Toggle Switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 46px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 30px;
+    transition: background 0.25s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 3px;
+    bottom: 3px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.switch input:checked+.slider {
+    background: #6c63ff;
+}
+
+.switch input:checked+.slider::before {
+    transform: translateX(21px);
+}
+
+.switch input:focus-visible+.slider {
+    outline: 2px solid #6c63ff;
+    outline-offset: 3px;
+}
+
+/* Action Buttons */
+
+.settings-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: #6c63ff;
+    color: #ffffff;
+    border: 1px solid #6c63ff;
+}
+
+.primary-btn:hover {
+    background: #574ee8;
+}
+
+.secondary-btn {
+    background: var(--card-bg, #ffffff);
+    color: var(--text-color, #333333);
+    border: 1px solid var(--border-color, #dddddd);
+}
+
+.secondary-btn:hover {
+    background: var(--hover-bg, #f5f5f5);
+}
+
+#settingsMessage {
+    width: 100%;
+    text-align: right;
+    font-size: 13px;
+    color: #24864a;
+    min-height: 18px;
+}
+
+/* Dark Mode */
+
+body.dark-mode .settings-card {
+    background: var(--card-bg, #1e1e1e);
+    border-color: var(--border-color, #383838);
+}
+
+body.dark-mode .section-heading h2,
+body.dark-mode .setting-item h3 {
+    color: var(--text-color, #f2f2f2);
+}
+
+body.dark-mode .section-heading p,
+body.dark-mode .setting-item p {
+    color: var(--muted-text, #b0b0b0);
+}
+
+body.dark-mode #currency {
+    background: var(--input-bg, #292929);
+    color: var(--text-color, #f2f2f2);
+    border-color: var(--border-color, #444444);
+}
+
+body.dark-mode .setting-item {
+    border-color: var(--border-color, #383838);
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+    .settings-card {
+        padding: 4px 16px;
+    }
+
+    .setting-item {
+        gap: 14px;
+    }
+
+    .setting-item p {
+        max-width: 240px;
+    }
+
+    #currency {
+        min-width: 145px;
+    }
+}
+
+@media (max-width: 480px) {
+    .setting-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #currency {
+        width: 100%;
+    }
+
+    .settings-actions {
+        justify-content: stretch;
+    }
+
+    .settings-actions button {
+        flex: 1;
+    }
+
+    #settingsMessage {
+        text-align: left;
+    }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | SpendWise</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="profile.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="../index.html" class="brand">
+                <span class="brand-logo">₹</span>
+                <span>SpendWise</span>
+            </a>
+
+            <p class="sidebar-label">WORKSPACE</p>
+
+            <nav class="navigation">
+                <a href="../index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="../index.html#transactions" class="nav-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="profile.html" class="nav-link active">
+                    <span class="nav-icon">♙</span>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="avatar" id="sidebarAvatar">U</div>
+                <div class="sidebar-user">
+                    <strong id="sidebarName">Your Name</strong>
+                    <span>Personal Account</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ACCOUNT SETTINGS</p>
+                    <h1>My Profile</h1>
+                    <p class="page-description">
+                        Manage your personal information and preferences.
+                    </p>
+                </div>
+
+                <a href="../index.html" class="back-button">
+                    ← Back to Dashboard
+                </a>
+            </header>
+
+            <!-- Profile Hero -->
+            <section class="profile-hero">
+                <div class="large-avatar" id="profileAvatar">U</div>
+
+                <div class="hero-details">
+                    <span class="account-badge">PERSONAL ACCOUNT</span>
+                    <h2 id="heroName">Your Name</h2>
+                    <p id="heroEmail">your@email.com</p>
+                </div>
+
+                <div class="hero-icon">✦</div>
+            </section>
+
+            <!-- Personal Information -->
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Personal Information</h2>
+                        <p>Update the details associated with your account.</p>
+                    </div>
+                    <span class="section-icon">♙</span>
+                </div>
+
+                <form id="profileForm">
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name" maxlength="80" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com" maxlength="150" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" maxlength="20">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occupation">Occupation</label>
+                            <input type="text" id="occupation" placeholder="e.g. Student" maxlength="80">
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <p id="profileStatus" class="status-message" role="status" aria-live="polite"></p>
+
+                        <button type="reset" class="button button-secondary">
+                            Reset
+                        </button>
+
+                        <button type="submit" class="button button-primary">
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Preferences -->
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Preferences</h2>
+                        <p>Personalize your SpendWise experience.</p>
+                    </div>
+                    <span class="section-icon">⚙</span>
+                </div>
+
+                <form id="preferencesForm">
+                    <div class="preferences-grid">
+
+                        <div class="preference-item">
+                            <div>
+                                <label for="currency">Currency</label>
+                                <p>Choose your preferred display currency.</p>
+                            </div>
+
+                            <select id="currency">
+                                <option value="INR">₹ INR — Indian Rupee</option>
+                                <option value="USD">$ USD — US Dollar</option>
+                                <option value="EUR">€ EUR — Euro</option>
+                                <option value="JPY">¥ JPY — Japanese Yen</option>
+                                <option value="GBP">£ GBP — British Pound</option>
+                            </select>
+                        </div>
+
+                        <div class="preference-item">
+                            <div>
+                                <label for="theme">Appearance</label>
+                                <p>Choose how SpendWise looks on this page.</p>
+                            </div>
+
+                            <select id="theme">
+                                <option value="light">Light Mode</option>
+                                <option value="dark">Dark Mode</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <p id="preferencesStatus" class="status-message" role="status" aria-live="polite"></p>
+
+                        <button type="submit" class="button button-primary">
+                            Save Preferences
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Account Summary -->
+            <section class="content-card account-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Account Overview</h2>
+                        <p>A quick summary of your local profile settings.</p>
+                    </div>
+                    <span class="section-icon">◈</span>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <span class="overview-icon">♙</span>
+                        <div>
+                            <span class="overview-label">Account Type</span>
+                            <strong>Personal</strong>
+                        </div>
+                    </div>
+
+                    <div class="overview-item">
+                        <span class="overview-icon">₹</span>
+                        <div>
+                            <span class="overview-label">Preferred Currency</span>
+                            <strong id="overviewCurrency">INR (₹)</strong>
+                        </div>
+                    </div>
+
+                    <div class="overview-item">
+                        <span class="overview-icon">✓</span>
+                        <div>
+                            <span class="overview-label">Profile Status</span>
+                            <strong id="profileCompletion">In Progress</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="privacy-note">
+                    Your profile and preferences are saved in this browser.
+                    This demo does not use a login system or send your data to a server.
+                </p>
+            </section>
+
+            <footer class="page-footer">
+                Made for smarter money management · SpendWise
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
